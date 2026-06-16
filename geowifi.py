@@ -749,6 +749,8 @@ def search_networks(bssid=None, ssid=None):
     # Create a list of functions to be called concurrently
     functions = []
     if bssid:
+        # TODO: only query APIs that have configured API keys in the config.yaml file
+        # TODO: make vendor check a command line parameter or config.yaml option.
         # [wigle_bssid, apple_bssid, mylnikov_bssid, google_bssid, combain_bssid, wifidb_bssid, vendor_check]
         functions.extend( [apple_bssid]
             )
