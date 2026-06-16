@@ -751,6 +751,8 @@ def search_networks(bssid=None, ssid=None):
     if bssid:
         # TODO: only query APIs that have configured API keys in the config.yaml file
         # TODO: make vendor check a command line parameter or config.yaml option.
+        # TODO: allow for offline vendor check using https://www.wireshark.org/download/automated/data/manuf
+        # this may have some extra vendors: https://github.com/jiribrejcha/wifi-vendor-lookup/blob/main/database/oui-vendor.csv 
         # [wigle_bssid, apple_bssid, mylnikov_bssid, google_bssid, combain_bssid, wifidb_bssid, vendor_check]
         functions.extend( [apple_bssid]
             )
