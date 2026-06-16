@@ -964,17 +964,17 @@ def main():
         map = create_map(search_results)
         # Save the map to an HTML file
         map.save('results/' + str(args.identifier).replace(':', '_') + '.html')
-        filepath = os.getcwd()
+        current_dir = os.getcwd()
         console.print(' [:green_circle:] [bright_yellow]Map saved at[/bright_yellow]: [bright_blue]' + str(
-            filepath) + '\\results\\' + str(args.identifier).replace(':', '_') + '.html[/bright_blue]')
+            current_dir) + '\\results\\' + str(args.identifier).replace(':', '_') + '.html[/bright_blue]')
         print()
     elif output_format == 'json':
         # Save the search results to a JSON file
         with open('results/' + str(args.identifier).replace(':', '_') + '.json', 'w') as outfile:
             json.dump(search_results, outfile)
-        filepath = os.getcwd()
+        current_dir = os.getcwd()
         console.print(' [:green_circle:] [bright_yellow]Json file saved at[/bright_yellow]: [bright_blue]' + str(
-            filepath) + '\\results\\' + str(args.identifier).replace(':', '_') + '.json[/bright_blue]')
+            current_dir) + '\\results\\' + str(args.identifier).replace(':', '_') + '.json[/bright_blue]')
         print()
 
 if __name__ == '__main__':
