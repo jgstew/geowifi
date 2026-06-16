@@ -960,6 +960,7 @@ def main():
 
     print_results_table(search_results)
 
+    # TODO: get the path once and use the correct path separator for the operating system
     # Save the search results in the specified output format
     if output_format == 'map':
         # Create a map with markers for the search results
